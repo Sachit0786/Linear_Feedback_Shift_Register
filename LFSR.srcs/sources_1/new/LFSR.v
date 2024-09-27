@@ -1,36 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 27.09.2024 20:23:37
-// Design Name: 
-// Module Name: LFSR
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-// Description: 
-// A LFSR or Linear Feedback Shift Register is a quick and easy way to generate
-// pseudo-random data inside of an FPGA.  The LFSR can be used for things like
-// counters, test patterns, scrambling of data, and others.  This module
-// creates an LFSR whose width gets set by a parameter.  The o_LFSR_Done will
-// pulse once all combinations of the LFSR are complete.  The number of clock
-// cycles that it takes o_LFSR_Done to pulse is equal to 2^g_Num_Bits-1.  For
-// example setting g_Num_Bits to 5 means that o_LFSR_Done will pulse every
-// 2^5-1 = 31 clock cycles.  o_LFSR_Data will change on each clock cycle that
-// the module is enabled, which can be used if desired.
-//
 // Parameters:
 // NUM_BITS - Set to the integer number of bits wide to create your LFSR.
 
