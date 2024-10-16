@@ -4,7 +4,7 @@ A Linear Feedback Shift Register (LFSR) is a versatile and efficient method for 
 In this Verilog implementation, we define an LFSR whose width is determined by a parameter **Num_Bits**, allowing for flexible bit-width configurations. The key feature of this design is its ability to produce a full sequence of values before repeating, i.e., it will cycle through "2^Num_Bits - 1" unique values. Once all possible combinations have been cycled through, the output signal **cycle_complete** will pulse, indicating the completion of the sequence. This pulse occurs only once after all the pseudo-random values are generated with respect to a particular **i_Seed_Data**. 
 For instance, if Num_Bits is set to 5, the LFSR will generate a sequence of 31 distinct values before resetting. The output o_LFSR_Data will provide a new pseudo-random value on each clock cycle when the module is enabled.
 
-## **KEY PARAMETERS AND SIGNALS**
+### **KEY PARAMETERS AND SIGNALS**
 **Num_Bits**: This parameter sets the width of the LFSR, determining how many bits the register will contain. It defines the range of possible output values and how long it will take before the sequence repeats.
 For example, a 5-bit LFSR will generate 31 unique values before repeating (since 2^5 - 1 = 31).
 **i_Clock**: The input clock signal that drives the LFSR. On each rising edge of the clock, the LFSR will shift its contents and update its value.
